@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostService } from './blog-post.service';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterOutlet,
     BlogPostComponent,
-    FormsModule
+    FormsModule,
+    UserComponent
   ]
 })
 export class AppComponent {

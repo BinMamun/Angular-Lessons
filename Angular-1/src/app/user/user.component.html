@@ -1,0 +1,18 @@
+<div class="user-container">
+  <h1 class="list-title">User List</h1>
+  <ul class="user-list">
+    <li class="user-item" [ngClass]="user.active? 'user-active': 'user-inactive'" *ngFor="let user of users">
+      <div class="profile-photo">
+        <img [src]="user.image">
+      </div>
+      <div class="user-details">
+        <span class="user-name">{{user.name}} ({{user.age}})</span>
+        <!-- <span class="user-age">{{user.age}}</span> -->
+        <span class="user-email">{{user.email}}</span>
+        <span class="user-status" [ngStyle]="{color: user.active? 'green':'red'}">
+          {{user.active? "Active":"Inactive"}}
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>

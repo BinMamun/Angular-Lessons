@@ -16,11 +16,15 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
   ]
 })
 export class AppComponent {
-  title = 'Angular Blog Post';
-
+  title = 'Blog Post';
   blogs = ["Blog 1", "Blog 2", "Blog 3"];
+  number = 1;
 
   getTitile() {
     return this.title;
+  }
+
+  clicked() {
+    this.number++;
   }
 }

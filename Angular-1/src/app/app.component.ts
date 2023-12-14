@@ -24,7 +24,16 @@ export class AppComponent {
     return this.title;
   }
 
-  clicked() {
+  clicked(event: any) {
+    event.stopPropagation();
+    console.log("Event bubble or propagation is stopped.");
     this.number++;
+  }
+
+  div1clicked() {
+    console.log("Div 1 Clicked");
+  }
+  div2clicked() {
+    console.log("Div 2 Clicked");
   }
 }

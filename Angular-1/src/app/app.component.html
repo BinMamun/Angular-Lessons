@@ -7,4 +7,8 @@
 <p>{{number}}</p>
 <p id="titlemgs"></p>
 
-<button (click)="clicked()">Submit</button>
+<div (click)="div2clicked()">
+  <div (click)="div1clicked()">
+    <button (click)="clicked($event)">Submit</button>
+  </div>
+</div>

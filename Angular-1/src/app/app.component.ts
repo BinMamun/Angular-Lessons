@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostService } from './blog-post.service';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +14,8 @@ import { BlogPostService } from './blog-post.service';
   imports: [
     CommonModule,
     RouterOutlet,
-    BlogPostComponent
+    BlogPostComponent,
+    FormsModule
   ]
 })
 export class AppComponent {
@@ -43,4 +45,12 @@ export class AppComponent {
   constructor(blogService: BlogPostService) {
     this.blogPosts = blogService.getBlogPosts();
   }
+
+
+  email = "abdullah@gmail.com";
+
+  onSave() {
+    console.log(this.email);
+  }
+
 }

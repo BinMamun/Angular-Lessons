@@ -20,3 +20,10 @@
     <p>-- {{blogPost.author}}</p>
   </div>
 </div>
+
+
+<div style="margin-top: 10px;">
+  <input type="text" [(ngModel)]="email">
+  <button (click)="onSave()">Save</button>
+  <p>{{email}}</p>
+</div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { BlogPostService } from './blog-post.service';
 
 
 @Component({
@@ -35,5 +36,11 @@ export class AppComponent {
   }
   div2clicked() {
     console.log("Div 2 Clicked");
+  }
+
+  blogPosts;
+
+  constructor(blogService: BlogPostService) {
+    this.blogPosts = blogService.getBlogPosts();
   }
 }

@@ -12,3 +12,11 @@
     <button (click)="clicked($event)">Submit</button>
   </div>
 </div>
+
+<div class="blog-post-container">
+  <div class="blog-post" *ngFor="let blogPost of blogPosts">
+    <h3>{{blogPost.title}}</h3>
+    <p>{{blogPost.description}}</p>
+    <p>-- {{blogPost.author}}</p>
+  </div>
+</div>

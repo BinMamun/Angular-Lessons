@@ -1,0 +1,16 @@
+.blog-post-container {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-post {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.blog-post:hover {
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}

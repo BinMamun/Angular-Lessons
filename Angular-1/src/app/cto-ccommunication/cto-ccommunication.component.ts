@@ -64,7 +64,7 @@ export class CtoCCommunicationComponent {
     }
   ];
 
-  onlikeCount(Id: number): void {
+  onlikeEvent(Id: number): void {
     console.log(`Id: ${Id} Blog Liked`);
   }
 }

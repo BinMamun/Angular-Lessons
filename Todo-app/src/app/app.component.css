@@ -1,0 +1,65 @@
+.container {
+  margin: 100px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.todo-list {
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.title {
+  text-align: center;
+}
+
+.input-and-button {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.input-and-button input {
+  padding: 10px;
+  flex: 1;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input-and-button button {
+  padding: 10px 20px;
+  background: #06d488;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.3s;
+}
+
+.input-and-button button:active {
+  transform: scale(0.9);
+}
+
+.todo-list li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 5px;
+}
+
+.todo-list li label {
+  flex: 1;
+  margin: 10px;
+}
+
+.fa {
+  margin: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="blogs.length; then blogposts else nopost">
+
+</div>
+
+<ng-template #blogposts>
+  <ul>
+    <li *ngFor="let blog of blogs">{{blog}}</li>
+  </ul>
+</ng-template>
+<ng-template #nopost>
+  <div *ngIf="!blogs.length">
+    No post found
+  </div>
+</ng-template>
+
+<div [hidden]="!blogs.length">
+  <ul>
+    <li *ngFor="let blog of blogs">{{blog}}</li>
+  </ul>
+</div>
+<div [hidden]="blogs.length">
+  No Posts Found!
+</div>

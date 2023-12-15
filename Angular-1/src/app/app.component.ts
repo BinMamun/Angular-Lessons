@@ -5,6 +5,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostService } from './blog-post.service';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
+import { StructaralDirectiveComponent } from './structaral-directive/structaral-directive.component';
 
 
 @Component({
@@ -17,7 +18,8 @@ import { UserComponent } from './user/user.component';
     RouterOutlet,
     BlogPostComponent,
     FormsModule,
-    UserComponent
+    UserComponent,
+    StructaralDirectiveComponent
   ]
 })
 export class AppComponent {

@@ -60,9 +60,13 @@ export class CtoCCommunicationComponent {
       Id: 4,
       Title: 'Blog Post 4',
       Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      ImageUrl: 'https://images.unsplash.com/photo-1680287327539-9467451a8b81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80'
+      ImageUrl: 'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ];
+
+  onlikeCount(Id: number): void {
+    console.log(`Id: ${Id} Blog Liked`);
+  }
 }
 
 export interface Blog {

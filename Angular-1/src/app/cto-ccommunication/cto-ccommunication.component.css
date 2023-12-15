@@ -1,3 +1,23 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .column {
   width: 300px;
   margin: 30px 10px;

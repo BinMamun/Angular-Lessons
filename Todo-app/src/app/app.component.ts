@@ -16,15 +16,18 @@ export class AppComponent {
 
   todoList: Todo[] = [];
 
-  todo: Todo = {
-    id: null,
-    title: ""
+  get initTodo(): Todo {
+    return {
+      id: null,
+      title: ""
+    }
   }
+  todo: Todo = this.initTodo;
 
   addTodo(): void {
 
     if (this.todo.id) {
-
+      //update logic
       this.todoList = this.todoList.map(item => {
         if (item.id === this.todo.id) {
           item.title = this.todo.title;
@@ -32,21 +35,22 @@ export class AppComponent {
         return item;
       })
     } else {
+      //create logic
       this.todo.id = Date.now();
       this.todoList.push({ ...this.todo });
     }
-    this.todo = {
-      id: null,
-      title: ""
-    }
-    console.log(this.todoList);
+    this.todo = this.initTodo;
   }
 
+
+  //edit button logic
   editTodo(item: Todo): void {
     this.todo = { ...item };
   }
 
+  //edit button logic
   deleteTodo(id: any): void {
     this.todoList = this.todoList.filter(item => item.id != id);
   }
+
 }

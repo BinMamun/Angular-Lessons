@@ -1,0 +1,13 @@
+<h1 *ngIf="blog">List of blog post</h1>
+
+
+<ng-template [ngIf]="blog">
+  <h1>List of Blog Post</h1>
+</ng-template>
+<ng-template [ngIf]="!blog">
+  <h1>No post found</h1>
+</ng-template>
+<div>
+  <span>By: {{blog?.Author?.Name}}</span>
+  <p>Title: {{blog?.Title}}</p>
+</div>

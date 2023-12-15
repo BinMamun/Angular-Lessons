@@ -6,6 +6,8 @@ import { BlogPostService } from './blog-post.service';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { StructaralDirectiveComponent } from './structaral-directive/structaral-directive.component';
+import { Lesson11Component } from './lesson-11/lesson-11.component';
+import { CtoCcommunicationComponent } from './cto-ccommunication/cto-ccommunication.component';
 
 
 @Component({
@@ -19,7 +21,9 @@ import { StructaralDirectiveComponent } from './structaral-directive/structaral-
     BlogPostComponent,
     FormsModule,
     UserComponent,
-    StructaralDirectiveComponent
+    StructaralDirectiveComponent,
+    Lesson11Component,
+    CtoCcommunicationComponent
   ]
 })
 export class AppComponent {

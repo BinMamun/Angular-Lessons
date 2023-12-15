@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BlogPostService } from './blog-post.service';
@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { StructaralDirectiveComponent } from './structaral-directive/structaral-directive.component';
 import { Lesson11Component } from './lesson-11/lesson-11.component';
 import { CtoCCommunicationComponent } from "./cto-ccommunication/cto-ccommunication.component"
+import { ViewChildComponent } from './view-child/view-child.component';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { CtoCCommunicationComponent } from "./cto-ccommunication/cto-ccommunicat
     UserComponent,
     StructaralDirectiveComponent,
     Lesson11Component,
-    CtoCCommunicationComponent
+    CtoCCommunicationComponent,
+    ViewChildComponent
   ]
 })
 export class AppComponent {
@@ -57,5 +59,11 @@ export class AppComponent {
 
   onSave() {
     console.log(this.email);
+  }
+
+  @ViewChild(ViewChildComponent) viewChild!: ViewChildComponent;
+
+  increamentCount(): void {
+    this.viewChild.increament();
   }
 }

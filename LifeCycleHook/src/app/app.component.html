@@ -1,3 +1,4 @@
 <p>Parent Component</p>
+<input type="text" [(ngModel)]="text">
 <button (click)="toggle()">Submit</button>
-<app-child *ngIf="isChild"></app-child>
+<app-child [text]="text"></app-child>

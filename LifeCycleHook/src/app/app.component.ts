@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChildComponent } from './child/child.component';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +23,9 @@ export class AppComponent implements OnInit {
   }
 
   isChild: boolean = false;
+
   toggle() {
     this.isChild = !this.isChild;
   }
+  text!: string;
 }

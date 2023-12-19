@@ -1,0 +1,13 @@
+<div class="container">
+  <button (click)="adduser()" class="add-button">Add User</button>
+  <div class="user-list">
+    <div class="user" *ngFor="let user of users">
+      <p>Created </p>
+      <p>{{user.created_date | date: 'dd-MMM-YYYY'}}</p>
+      <p>Name </p>
+      <p>{{user.name | uppercase}}</p>
+      <p>Age </p>
+      <p>{{calculateAge(user.date_of_birth)}}</p>
+    </div>
+  </div>
+</div>

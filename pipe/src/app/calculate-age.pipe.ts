@@ -5,9 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 export class CalculateAgePipe implements PipeTransform {
-
   transform(date: string, ...args: unknown[]): number {
     return new Date().getFullYear() - new Date(date).getFullYear();
   }
-
 }

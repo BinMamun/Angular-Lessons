@@ -10,7 +10,6 @@ import { CalculateAgePipe } from './calculate-age.pipe';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
   users = [
     {
       name: "Afsan Reza",
@@ -35,10 +34,5 @@ export class AppComponent {
       date_of_birth: "1978",
       created_date: "2020-07-15"
     });
-  }
-
-  calculateAge(date: string): number {
-    console.log(date);
-    return new Date().getFullYear() - new Date(date).getFullYear();
   }
 }

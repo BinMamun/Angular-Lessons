@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     console.log("Parent component called");
   }
 
-  isChild: boolean = false;
+  isChild: boolean = true;
 
   toggle() {
     this.isChild = !this.isChild;

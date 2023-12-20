@@ -1,7 +1,8 @@
 <div class="container">
+  <input type="text" [(ngModel)]="searchText" placeholder="Search user">
   <button (click)="adduser()" class="add-button">Add User</button>
   <div class="user-list">
-    <div class="user" *ngFor="let user of users">
+    <div class="user" *ngFor="let user of users | filter : searchText">
       <p>Created </p>
       <p>{{user.created_date | date: 'dd-MMM-YYYY'}}</p>
       <p>Name </p>

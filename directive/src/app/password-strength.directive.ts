@@ -8,7 +8,7 @@ import { Directive, HostListener } from '@angular/core';
 export class PasswordStrengthDirective {
   constructor() { }
 
-  strengthValue!: number;
+  strengthValue!: string;
 
   @HostListener('input', ['$event'])
   output(event: InputEvent) {
@@ -16,10 +16,10 @@ export class PasswordStrengthDirective {
     this.strengthValue = this.passwordStrength(input.value);
   }
 
-  passwordStrength(pw: string): number {
-    if (!pw) return 0;
-    else if (pw.length < 6) return 1;
-    else if (pw.length < 8) return 2;
-    else return 3;
+  passwordStrength(pw: string): string {
+    if (!pw) return "";
+    else if (pw.length < 6) return "strength-1";
+    else if (pw.length < 8) return "strength-2";
+    else return "strength-3";
   }
 }
